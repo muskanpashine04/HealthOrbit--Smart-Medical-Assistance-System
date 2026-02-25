@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Register - Med-Aids</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon" id="dark-mode-icon"></i>
+    </div>
+    <div class="admin-login-wrapper">
+        <div class="admin-login-container">
+            <div class="admin-login-header">
+                <h2>Admin Registration</h2>
+                <p>Create a new admin account</p>
+            </div>
+            <form id="adminRegisterForm" class="admin-login-form">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="adminUsername" name="adminUsername" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adminEmail">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="adminEmail" name="adminEmail" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="adminPassword" name="adminPassword" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adminConfirmPassword">Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="adminConfirmPassword" name="adminConfirmPassword" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <button type="submit" class="admin-btn admin-btn-primary admin-login-btn">Register</button>
+            </form>
+            <div class="admin-login-footer">
+                <p>Already have an admin account? <a href="admin-login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const adminRegisterForm = document.getElementById('adminRegisterForm');
+            const adminUsernameInput = document.getElementById('adminUsername');
+            const adminEmailInput = document.getElementById('adminEmail');
+            const adminPasswordInput = document.getElementById('adminPassword');
+            const adminConfirmPasswordInput = document.getElementById('adminConfirmPassword');
+            const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+
+            togglePasswordIcons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    const passwordInput = icon.previousElementSibling;
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                });
+            });
+
+            adminRegisterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const username = adminUsernameInput.value;
+                const email = adminEmailInput.value;
+                const password = adminPasswordInput.value;
+                const confirmPassword = adminConfirmPasswordInput.value;
+
+                if (password !== confirmPassword) {
+                    showMessage('Passwords do not match!', 'error');
+                    return;
+                }
+
+                // Simulate admin registration
+                console.log('Admin Registration Attempt:', { username, email, password });
+
+                // In a real application, you would send this data to a server for registration
+                // and handle the response (e.g., redirect to login on success)
+                showMessage('Admin account registered successfully! Redirecting to login...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'admin-login.html';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

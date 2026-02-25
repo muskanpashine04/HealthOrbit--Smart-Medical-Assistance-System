@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Med-Aids</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <link rel="stylesheet" href="../styles/features.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="messageContainer"></div>
+    <div class="admin-login-wrapper">
+    <header>
+        <div class="container">
+                <div class="dark-mode-toggle">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </div>
+            <div class="logo">
+                <h1>Med-<span>Aids</span></h1>
+            </div>
+            <nav>
+                <ul class="navbar-nav ml-auto">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header admin-header">
+        <div class="container">
+            <h1>Admin Login</h1>
+            <p>Access the website administration panel</p>
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">></span>
+                <span class="current">Admin Login</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container admin-auth-container">
+                <div class="auth-form-container">
+                    <div class="admin-login-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h2>Administrator Access</h2>
+                        <p>Please enter your credentials to access the admin panel</p>
+                    </div>
+                    
+                    <form id="adminLoginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="username" name="username" placeholder="Username" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="password" required>
+                                <i class="fas fa-eye toggle-password"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Login to Admin Panel</button>
+                        
+                        <div class="auth-footer admin-auth-footer">
+                            <p><i class="fas fa-info-circle"></i> This area is restricted to authorized personnel only.</p>
+                            <p><a href="login.html">Return to user login</a></p>
+                            <p>Don't have an admin account? <a href="admin-register.html">Register here</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="auth-info admin-auth-info">
+                    <div class="auth-info-content">
+                        <h2>Admin Dashboard</h2>
+                        <p>Access the administration panel to manage website content, user accounts, and system settings.</p>
+                        
+                        <div class="auth-features">
+                            <div class="auth-feature">
+                                <i class="fas fa-edit"></i>
+                                <div>
+                                    <h3>Content Management</h3>
+                                    <p>Update website content, services, and testimonials.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-feature">
+                                <i class="fas fa-users-cog"></i>
+                                <div>
+                                    <h3>User Management</h3>
+                                    <p>Manage user accounts, roles, and permissions.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-feature">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h3>Analytics & Reports</h3>
+                                    <p>View website statistics and generate reports.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-feature">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h3>System Settings</h3>
+                                    <p>Configure website settings and preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Med-<span>Aids</span></h2>
+                    <p>Your trusted healthcare partner</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#primary-care">Primary Care</a></li>
+                        <li><a href="services.html#specialized-treatment">Specialized Treatment</a></li>
+                        <li><a href="services.html#emergency-care">Emergency Care</a></li>
+                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
+                        <li><a href="services.html#health-checkups">Health Checkups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for health tips and updates</p>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Med-Aids. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/script.js"></script>
+    <script src="../src/features.js"></script>
+    <script src="../src/admin.js"></script>
+</body>
+</html>

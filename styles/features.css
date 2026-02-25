@@ -1,0 +1,1237 @@
+/* Features CSS - Additional features for Med-Aids */
+
+/* Common Variables */
+:root {
+    --emergency-color: #ea4335;
+    --emergency-hover: #d32f2f;
+    --success-color: #34a853;
+    --info-color: #4285f4;
+    --warning-color: #fbbc05;
+}
+
+/* SOS Emergency Call Button */
+.sos-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--emergency-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(234, 67, 53, 0.4);
+    z-index: 999;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.sos-button:hover {
+    background-color: var(--emergency-hover);
+    transform: scale(1.05);
+}
+
+.sos-button i {
+    color: white;
+    font-size: 30px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(234, 67, 53, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(234, 67, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(234, 67, 53, 0);
+    }
+}
+
+/* SOS Modal */
+.sos-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.sos-modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sos-modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--emergency-color);
+}
+
+.sos-modal-header i {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.sos-modal-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.sos-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.sos-modal-close:hover {
+    color: var(--emergency-color);
+}
+
+.sos-contact-list {
+    margin-bottom: 20px;
+}
+
+.sos-contact-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+}
+
+.sos-contact-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.sos-contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(234, 67, 53, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.sos-contact-icon i {
+    font-size: 20px;
+    color: var(--emergency-color);
+}
+
+.sos-contact-info {
+    flex: 1;
+}
+
+.sos-contact-info h3 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+}
+
+.sos-contact-info p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.sos-contact-action {
+    display: flex;
+    gap: 10px;
+}
+
+.sos-contact-action button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sos-call-btn {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.sos-call-btn:hover {
+    background-color: #2d9348;
+    transform: scale(1.05);
+}
+
+.sos-message-btn {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.sos-message-btn:hover {
+    background-color: #3367d6;
+    transform: scale(1.05);
+}
+
+.sos-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.sos-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sos-emergency-btn {
+    background-color: var(--emergency-color);
+    color: white;
+}
+
+.sos-emergency-btn:hover {
+    background-color: var(--emergency-hover);
+}
+
+.sos-locate-btn {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.sos-locate-btn:hover {
+    background-color: #3367d6;
+}
+
+/* Search and Filter */
+.search-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Quick Access Buttons */
+.quick-access {
+    padding: 50px 0;
+    background-color: var(--light-bg);
+}
+
+.quick-access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.quick-access-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.quick-access-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quick-access-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.quick-access-header i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.quick-access-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.quick-access-content {
+    padding: 20px;
+}
+
+.quick-access-content p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.quick-access-content .btn {
+    width: 100%;
+}
+
+/* Downloadable Instructions */
+.download-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.download-card-header {
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.download-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.download-card-content {
+    padding: 20px;
+}
+
+.download-card-content p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0d5bbd;
+}
+
+/* Wellness Support */
+.wellness-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.wellness-card:hover {
+    transform: translateY(-5px);
+}
+
+.wellness-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.wellness-card-content {
+    padding: 20px;
+}
+
+.wellness-card-content h3 {
+    margin: 0 0 15px;
+    color: var(--primary-color);
+}
+
+.wellness-card-content p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.wellness-card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+}
+
+.wellness-card-footer .btn-text {
+    font-size: 0.9rem;
+}
+
+.wellness-difficulty {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.wellness-difficulty i {
+    color: var(--primary-color);
+}
+
+/* Medicine Reminder */
+.reminder-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.reminder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.reminder-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.reminder-add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reminder-add-btn:hover {
+    background-color: #0d5bbd;
+    transform: scale(1.05);
+}
+
+.reminder-list {
+    margin-bottom: 20px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+}
+
+.reminder-item:hover {
+    background-color: #f0f0f0;
+}
+
+.reminder-checkbox {
+    margin-right: 15px;
+}
+
+.reminder-info {
+    flex: 1;
+}
+
+.reminder-info h4 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+}
+
+.reminder-info p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.reminder-time {
+    background-color: rgba(26, 115, 232, 0.1);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.reminder-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.reminder-edit-btn, .reminder-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reminder-edit-btn i {
+    color: var(--primary-color);
+}
+
+.reminder-delete-btn i {
+    color: var(--emergency-color);
+}
+
+.reminder-edit-btn:hover, .reminder-delete-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Diet Guidance */
+.diet-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.diet-card:hover {
+    transform: translateY(-5px);
+}
+
+.diet-card-header {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.diet-card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.diet-card-content {
+    padding: 20px;
+}
+
+.diet-meal {
+    margin-bottom: 20px;
+}
+
+.diet-meal h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    color: var(--text-color);
+}
+
+.diet-meal h4 i {
+    color: var(--secondary-color);
+}
+
+.diet-meal p {
+    margin: 0 0 5px;
+    color: var(--light-text);
+}
+
+.diet-meal ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.diet-meal ul li {
+    margin-bottom: 5px;
+    color: var(--light-text);
+}
+
+/* Emergency Response */
+.emergency-response {
+    padding: 80px 0;
+    background-color: #fff5f5;
+}
+
+.emergency-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--emergency-color);
+    transition: all 0.3s;
+}
+
+.emergency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-card-header {
+    padding: 20px;
+    background-color: rgba(234, 67, 53, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.emergency-card-header i {
+    font-size: 24px;
+    color: var(--emergency-color);
+}
+
+.emergency-card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--emergency-color);
+}
+
+.emergency-card-content {
+    padding: 20px;
+}
+
+.emergency-card-content p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.emergency-video {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.emergency-video video {
+    width: 100%;
+    display: block;
+}
+
+.emergency-dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.emergency-dos, .emergency-donts {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.emergency-dos {
+    background-color: rgba(52, 168, 83, 0.1);
+}
+
+.emergency-donts {
+    background-color: rgba(234, 67, 53, 0.1);
+}
+
+.emergency-dos h4, .emergency-donts h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 15px;
+}
+
+.emergency-dos h4 {
+    color: var(--success-color);
+}
+
+.emergency-donts h4 {
+    color: var(--emergency-color);
+}
+
+.emergency-dos ul, .emergency-donts ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.emergency-dos ul li, .emergency-donts ul li {
+    margin-bottom: 8px;
+}
+
+/* Contact Directory */
+.contact-directory {
+    padding: 80px 0;
+}
+
+.directory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.directory-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.directory-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.directory-add-btn:hover {
+    background-color: #0d5bbd;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.directory-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.directory-card:hover {
+    transform: translateY(-5px);
+}
+
+.directory-card-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.directory-card-header .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.directory-card-header .avatar i {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.directory-card-header h3 {
+    margin: 0 0 5px;
+    font-size: 1.3rem;
+}
+
+.directory-card-header p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.directory-card-content {
+    padding: 20px;
+}
+
+.directory-contact-info {
+    margin-bottom: 20px;
+}
+
+.directory-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.directory-contact-item i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.directory-contact-item p {
+    margin: 0;
+    color: var(--light-text);
+}
+
+.directory-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.directory-card-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.directory-call-btn {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.directory-call-btn:hover {
+    background-color: #2d9348;
+}
+
+.directory-message-btn {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.directory-message-btn:hover {
+    background-color: #3367d6;
+}
+
+/* Caregiver Support */
+.caregiver-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.caregiver-mode-toggle p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.caregiver-dashboard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.caregiver-dashboard h3 {
+    margin: 0 0 20px;
+    color: var(--primary-color);
+}
+
+.patient-status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.patient-status-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.patient-status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.patient-status-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.patient-status-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.patient-status-header h4 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+}
+
+.patient-status-header p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.patient-status-info {
+    margin-bottom: 15px;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.status-item p {
+    margin: 0;
+    color: var(--light-text);
+}
+
+.status-item .status {
+    font-weight: 500;
+}
+
+.status-good {
+    color: var(--success-color);
+}
+
+.status-warning {
+    color: var(--warning-color);
+}
+
+.status-alert {
+    color: var(--emergency-color);
+}
+
+.patient-status-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.patient-status-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.check-in-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.check-in-btn:hover {
+    background-color: #0d5bbd;
+}
+
+.alert-history {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.alert-history h4 {
+    margin: 0 0 15px;
+    color: var(--text-color);
+}
+
+.alert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.alert-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-icon.emergency {
+    background-color: rgba(234, 67, 53, 0.1);
+    color: var(--emergency-color);
+}
+
+.alert-icon.medication {
+    background-color: rgba(26, 115, 232, 0.1);
+    color: var(--primary-color);
+}
+
+.alert-info {
+    flex: 1;
+}
+
+.alert-info h5 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.alert-info p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.alert-time {
+    color: var(--light-text);
+    font-size: 0.8rem;
+}
+
+/* Add to Home Screen */
+.add-to-home {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: none;
+    animation: slideUp 0.5s;
+    max-width: 300px;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.add-to-home-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.add-to-home-header i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.add-to-home-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.add-to-home p {
+    margin: 0 0 15px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.add-to-home-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.add-to-home-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.add-to-home-later {
+    background-color: transparent;
+    color: var(--light-text);
+}
+
+.add-to-home-now {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.add-to-home-now:hover {
+    background-color: #0d5bbd;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .emergency-dos-donts {
+        grid-template-columns: 1fr;
+    }
+    
+    .sos-button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .sos-button i {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quick-access-grid,
+    .patient-status-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sos-actions {
+        flex-direction: column;
+    }
+    
+    .directory-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sos-modal-content {
+        padding: 20px;
+    }
+    
+    .sos-contact-action {
+        flex-direction: column;
+    }
+    
+    .sos-button {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .sos-button i {
+        font-size: 20px;
+    }
+    
+    .add-to-home {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+}

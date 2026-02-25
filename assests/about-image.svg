@@ -1,0 +1,75 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="400" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Hospital Building -->
+  <rect x="100" y="100" width="300" height="200" fill="#ffffff" stroke="#1a73e8" stroke-width="3"/>
+  
+  <!-- Windows -->
+  <rect x="130" y="130" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="190" y="130" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="250" y="130" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="310" y="130" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  
+  <rect x="130" y="190" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="190" y="190" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="250" y="190" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="310" y="190" width="40" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  
+  <!-- Entrance -->
+  <rect x="220" y="250" width="60" height="50" fill="#1a73e8"/>
+  
+  <!-- Hospital Sign -->
+  <rect x="200" y="80" width="100" height="40" rx="5" ry="5" fill="#1a73e8"/>
+  <text x="250" y="105" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Med-Aids</text>
+  
+  <!-- Medical Cross -->
+  <rect x="235" y="50" width="30" height="30" fill="#ea4335"/>
+  <rect x="245" y="40" width="10" height="50" fill="#ea4335"/>
+  
+  <!-- Doctors and Nurses -->
+  <!-- Doctor 1 -->
+  <circle cx="150" cy="320" r="15" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="145" y="335" width="10" height="25" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="135" y="345" width="10" height="15" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="155" y="345" width="10" height="15" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Doctor 2 -->
+  <circle cx="200" cy="320" r="15" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="195" y="335" width="10" height="25" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="185" y="345" width="10" height="15" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="205" y="345" width="10" height="15" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  
+  <!-- Nurse -->
+  <circle cx="250" cy="320" r="15" fill="#ffffff" stroke="#ea4335" stroke-width="2"/>
+  <rect x="245" y="335" width="10" height="25" fill="#ffffff" stroke="#ea4335" stroke-width="2"/>
+  <rect x="235" y="345" width="10" height="15" fill="#ffffff" stroke="#ea4335" stroke-width="2"/>
+  <rect x="255" y="345" width="10" height="15" fill="#ffffff" stroke="#ea4335" stroke-width="2"/>
+  
+  <!-- Patient -->
+  <circle cx="300" cy="320" r="15" fill="#ffffff" stroke="#666" stroke-width="2"/>
+  <rect x="295" y="335" width="10" height="25" fill="#ffffff" stroke="#666" stroke-width="2"/>
+  <rect x="285" y="345" width="10" height="15" fill="#ffffff" stroke="#666" stroke-width="2"/>
+  <rect x="305" y="345" width="10" height="15" fill="#ffffff" stroke="#666" stroke-width="2"/>
+  
+  <!-- Ambulance -->
+  <rect x="350" y="330" width="80" height="30" rx="5" ry="5" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="430" y="340" width="20" height="20" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="350" y="340" width="80" height="20" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <circle cx="370" cy="360" r="7" fill="#666" stroke="#333" stroke-width="1"/>
+  <circle cx="410" cy="360" r="7" fill="#666" stroke="#333" stroke-width="1"/>
+  
+  <!-- Emergency Symbol on Ambulance -->
+  <rect x="380" y="335" width="20" height="10" fill="#ea4335"/>
+  <path d="M385 340 L395 340 M390 335 L390 345" stroke="#ffffff" stroke-width="1"/>
+  
+  <!-- Trees -->
+  <circle cx="80" cy="320" r="20" fill="#34a853"/>
+  <rect x="75" y="320" width="10" height="40" fill="#8c6239"/>
+  
+  <circle cx="450" cy="320" r="20" fill="#34a853"/>
+  <rect x="445" y="320" width="10" height="40" fill="#8c6239"/>
+  
+  <!-- Text -->
+  <text x="250" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#1a73e8">About Med-Aids</text>
+</svg>

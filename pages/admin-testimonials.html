@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Management - Med-Aids Admin</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <link rel="stylesheet" href="../styles/features.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-wrapper">
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <h2>Med-<span>Aids</span></h2>
+                <p>Admin Panel</p>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-content.html">
+                            <i class="fas fa-edit"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-services.html">
+                            <i class="fas fa-stethoscope"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="admin-testimonials.html">
+                            <i class="fas fa-comment-medical"></i>
+                            <span>Testimonials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-users.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-appointments.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-settings.html">
+                            <i class="fas fa-cogs"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+                <a href="../index.html" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Site</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Admin Content Area -->
+        <main class="admin-content">
+            <!-- Admin Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Testimonials Management</h1>
+                </div>
+                
+                <div class="admin-header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search testimonials...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <i class="fas fa-moon" id="dark-mode-icon"></i>
+                    </div>
+                    <div class="admin-notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-user">
+                        <img src="https://via.placeholder.com/40/007bff/ffffff?text=AU" alt="Admin User" class="admin-avatar">
+                        <div class="admin-user-info">
+                            <p class="admin-name">Admin User</p>
+                            <p class="admin-role">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Testimonials Management -->
+            <div class="admin-content-area">
+                <!-- Testimonials Overview -->
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h2>Testimonials Overview</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-outline" id="pendingTestimonialsBtn"><i class="fas fa-clock"></i> Pending Review (5)</button>
+                            <button class="btn btn-primary" id="addTestimonialBtn"><i class="fas fa-plus"></i> Add Testimonial</button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Rating</th>
+                                    <th>Testimonial</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="../assests/testimonial1.svg" alt="User" class="user-avatar">
+                                            <div>
+                                                <p class="user-name">Sarah Johnson</p>
+                                                <p class="user-email">sarah.j@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>5.0</span>
+                                        </div>
+                                    </td>
+                                    <td>"The care I received at Med-Aids was exceptional. The doctors were attentive..."</td>
+                                    <td>May 15, 2025</td>
+                                    <td><span class="status active">Published</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="action-icon edit" data-testimonial="1"><i class="fas fa-edit"></i></button>
+                                            <button class="action-icon delete"><i class="fas fa-trash-alt"></i></button>
+                                            <button class="action-icon view"><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="../assests/testimonial2.svg" alt="User" class="user-avatar">
+                                            <div>
+                                                <p class="user-name">Michael Chen</p>
+                                                <p class="user-email">m.chen@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>4.0</span>
+                                        </div>
+                                    </td>
+                                    <td>"I've been using Med-Aids for my family's healthcare needs for over two years..."</td>
+                                    <td>June 3, 2025</td>
+                                    <td><span class="status active">Published</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="action-icon edit" data-testimonial="2"><i class="fas fa-edit"></i></button>
+                                            <button class="action-icon delete"><i class="fas fa-trash-alt"></i></button>
+                                            <button class="action-icon view"><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="../assests/testimonial3.svg" alt="User" class="user-avatar">
+                                            <div>
+                                                <p class="user-name">Emily Rodriguez</p>
+                                                <p class="user-email">emily.r@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>4.5</span>
+                                        </div>
+                                    </td>
+                                    <td>"The telemedicine service saved me so much time. I was able to consult with a doctor..."</td>
+                                    <td>July 12, 2025</td>
+                                    <td><span class="status active">Published</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="action-icon edit" data-testimonial="3"><i class="fas fa-edit"></i></button>
+                                            <button class="action-icon delete"><i class="fas fa-trash-alt"></i></button>
+                                            <button class="action-icon view"><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="../assests/testimonial4.svg" alt="User" class="user-avatar">
+                                            <div>
+                                                <p class="user-name">David Wilson</p>
+                                                <p class="user-email">d.wilson@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>5.0</span>
+                                        </div>
+                                    </td>
+                                    <td>"After my emergency surgery, the follow-up care I received was outstanding..."</td>
+                                    <td>August 5, 2025</td>
+                                    <td><span class="status inactive">Draft</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="action-icon edit" data-testimonial="4"><i class="fas fa-edit"></i></button>
+                                            <button class="action-icon delete"><i class="fas fa-trash-alt"></i></button>
+                                            <button class="action-icon view"><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Editor (Hidden by default, shown when editing) -->
+                <div class="admin-card testimonial-editor" id="testimonialEditor" style="display: none;">
+                    <div class="admin-card-header">
+                        <h2>Edit Testimonial</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-primary" id="saveTestimonialBtn"><i class="fas fa-save"></i> Save Changes</button>
+                            <button class="btn btn-outline" id="cancelEditBtn"><i class="fas fa-times"></i> Cancel</button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <form id="testimonialForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="testimonialName">Name</label>
+                                    <input type="text" id="testimonialName" class="form-control" value="Sarah Johnson">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="testimonialEmail">Email</label>
+                                    <input type="email" id="testimonialEmail" class="form-control" value="sarah.j@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="testimonialRating">Rating</label>
+                                <div class="rating-input">
+                                    <div class="star-rating">
+                                        <input type="radio" id="star5" name="rating" value="5" checked>
+                                        <label for="star5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star4" name="rating" value="4">
+                                        <label for="star4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star3" name="rating" value="3">
+                                        <label for="star3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star2" name="rating" value="2">
+                                        <label for="star2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star1" name="rating" value="1">
+                                        <label for="star1"><i class="fas fa-star"></i></label>
+                                    </div>
+                                    <span class="rating-value">5.0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="testimonialContent">Testimonial Content</label>
+                                <textarea id="testimonialContent" class="form-control" rows="6">The care I received at Med-Aids was exceptional. The doctors were attentive and took the time to listen to my concerns. The facility was clean and modern, and the staff was friendly and professional. I would highly recommend Med-Aids to anyone looking for quality healthcare services.</textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="testimonialDate">Date</label>
+                                    <input type="date" id="testimonialDate" class="form-control" value="2025-05-15">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="testimonialStatus">Status</label>
+                                    <select id="testimonialStatus" class="form-control">
+                                        <option value="published" selected>Published</option>
+                                        <option value="pending">Pending Review</option>
+                                        <option value="draft">Draft</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="testimonialImage">Profile Image</label>
+                                <div class="image-upload-container">
+                                    <div class="image-preview">
+                                        <img src="../assests/testimonial1.svg" alt="User" id="testimonialImagePreview">
+                                    </div>
+                                    <div class="image-upload-controls">
+                                        <button type="button" class="btn btn-outline"><i class="fas fa-upload"></i> Upload New Image</button>
+                                        <button type="button" class="btn btn-outline btn-danger"><i class="fas fa-trash-alt"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adminNotes">Admin Notes</label>
+                                <textarea id="adminNotes" class="form-control" rows="3" placeholder="Add private notes about this testimonial (not visible to users)"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Add New Testimonial Form (Hidden by default) -->
+                <div class="admin-card testimonial-editor" id="addTestimonialForm" style="display: none;">
+                    <div class="admin-card-header">
+                        <h2>Add New Testimonial</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-primary" id="createTestimonialBtn"><i class="fas fa-plus"></i> Create Testimonial</button>
+                            <button class="btn btn-outline" id="cancelAddBtn"><i class="fas fa-times"></i> Cancel</button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <form id="newTestimonialForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newTestimonialName">Name</label>
+                                    <input type="text" id="newTestimonialName" class="form-control" placeholder="Enter name">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newTestimonialEmail">Email</label>
+                                    <input type="email" id="newTestimonialEmail" class="form-control" placeholder="Enter email">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newTestimonialRating">Rating</label>
+                                <div class="rating-input">
+                                    <div class="star-rating">
+                                        <input type="radio" id="newStar5" name="newRating" value="5">
+                                        <label for="newStar5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="newStar4" name="newRating" value="4" checked>
+                                        <label for="newStar4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="newStar3" name="newRating" value="3">
+                                        <label for="newStar3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="newStar2" name="newRating" value="2">
+                                        <label for="newStar2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="newStar1" name="newRating" value="1">
+                                        <label for="newStar1"><i class="fas fa-star"></i></label>
+                                    </div>
+                                    <span class="rating-value">4.0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newTestimonialContent">Testimonial Content</label>
+                                <textarea id="newTestimonialContent" class="form-control" rows="6" placeholder="Enter testimonial content"></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newTestimonialDate">Date</label>
+                                    <input type="date" id="newTestimonialDate" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newTestimonialStatus">Status</label>
+                                    <select id="newTestimonialStatus" class="form-control">
+                                        <option value="published">Published</option>
+                                        <option value="pending">Pending Review</option>
+                                        <option value="draft" selected>Draft</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newTestimonialImage">Profile Image</label>
+                                <div class="image-upload-container">
+                                    <div class="image-preview">
+                                        <div class="empty-image"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="image-upload-controls">
+                                        <button type="button" class="btn btn-outline"><i class="fas fa-upload"></i> Upload Image</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newAdminNotes">Admin Notes</label>
+                                <textarea id="newAdminNotes" class="form-control" rows="3" placeholder="Add private notes about this testimonial (not visible to users)"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Pending Testimonials (Hidden by default) -->
+                <div class="admin-card" id="pendingTestimonials" style="display: none;">
+                    <div class="admin-card-header">
+                        <h2>Pending Testimonials</h2>
+                        <button class="btn btn-outline" id="backToAllTestimonialsBtn"><i class="fas fa-arrow-left"></i> Back to All Testimonials</button>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <div class="testimonial-cards">
+                            <div class="testimonial-review-card">
+                                <div class="testimonial-header">
+                                    <div class="user-info">
+                                        <img src="../assests/testimonial5.svg" alt="User" class="user-avatar">
+                                        <div>
+                                            <p class="user-name">Jennifer Adams</p>
+                                            <p class="user-email">j.adams@example.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>5.0</span>
+                                        </div>
+                                        <p class="date">Submitted: September 2, 2025</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p>I recently had a health scare and needed immediate attention. The emergency care team at Med-Aids was incredible. They were quick, professional, and compassionate. The doctor explained everything clearly and made sure I understood my treatment options. I'm grateful for the excellent care I received during a stressful time.</p>
+                                </div>
+                                <div class="testimonial-actions">
+                                    <button class="btn btn-success"><i class="fas fa-check"></i> Approve</button>
+                                    <button class="btn btn-danger"><i class="fas fa-times"></i> Reject</button>
+                                    <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit & Approve</button>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-review-card">
+                                <div class="testimonial-header">
+                                    <div class="user-info">
+                                        <img src="../assests/testimonial6.svg" alt="User" class="user-avatar">
+                                        <div>
+                                            <p class="user-name">Robert Thompson</p>
+                                            <p class="user-email">r.thompson@example.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>3.0</span>
+                                        </div>
+                                        <p class="date">Submitted: September 5, 2025</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p>The doctors are knowledgeable, but I had to wait over an hour past my appointment time. The reception staff wasn't very helpful when I asked about the delay. The actual medical care was good once I finally saw the doctor, but the waiting experience could be improved.</p>
+                                </div>
+                                <div class="testimonial-actions">
+                                    <button class="btn btn-success"><i class="fas fa-check"></i> Approve</button>
+                                    <button class="btn btn-danger"><i class="fas fa-times"></i> Reject</button>
+                                    <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit & Approve</button>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-review-card">
+                                <div class="testimonial-header">
+                                    <div class="user-info">
+                                        <img src="../assests/testimonial7.svg" alt="User" class="user-avatar">
+                                        <div>
+                                            <p class="user-name">Sophia Martinez</p>
+                                            <p class="user-email">s.martinez@example.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>4.5</span>
+                                        </div>
+                                        <p class="date">Submitted: September 8, 2025</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p>I've been bringing my children to Med-Aids for their regular check-ups for the past year, and I'm very satisfied with the pediatric care. The doctors are patient and great with kids. The waiting area has toys and books to keep children entertained. The only suggestion I have is to offer more appointment slots in the late afternoon for parents who work full-time.</p>
+                                </div>
+                                <div class="testimonial-actions">
+                                    <button class="btn btn-success"><i class="fas fa-check"></i> Approve</button>
+                                    <button class="btn btn-danger"><i class="fas fa-times"></i> Reject</button>
+                                    <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit & Approve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../src/script.js"></script>
+    <script src="../src/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Edit Testimonial Button Click
+            const editButtons = document.querySelectorAll('.action-icon.edit');
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const testimonialId = this.getAttribute('data-testimonial');
+                    document.getElementById('testimonialEditor').style.display = 'block';
+                    // In a real application, you would fetch the testimonial details from the server
+                    // and populate the form fields
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Cancel Edit Button Click
+            document.getElementById('cancelEditBtn').addEventListener('click', function() {
+                document.getElementById('testimonialEditor').style.display = 'none';
+            });
+            
+            // Add New Testimonial Button Click
+            document.getElementById('addTestimonialBtn').addEventListener('click', function() {
+                document.getElementById('addTestimonialForm').style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+            
+            // Cancel Add Button Click
+            document.getElementById('cancelAddBtn').addEventListener('click', function() {
+                document.getElementById('addTestimonialForm').style.display = 'none';
+            });
+            
+            // Save Testimonial Button Click
+            document.getElementById('saveTestimonialBtn').addEventListener('click', function() {
+                // In a real application, you would save the form data to the server
+                // For this demo, we'll just show a success message
+                alert('Testimonial updated successfully!');
+                document.getElementById('testimonialEditor').style.display = 'none';
+            });
+            
+            // Create Testimonial Button Click
+            document.getElementById('createTestimonialBtn').addEventListener('click', function() {
+                // In a real application, you would save the form data to the server
+                // For this demo, we'll just show a success message
+                alert('New testimonial created successfully!');
+                document.getElementById('addTestimonialForm').style.display = 'none';
+            });
+            
+            // Pending Testimonials Button Click
+            document.getElementById('pendingTestimonialsBtn').addEventListener('click', function() {
+                document.querySelector('.admin-card:first-child').style.display = 'none';
+                document.getElementById('pendingTestimonials').style.display = 'block';
+            });
+            
+            // Back to All Testimonials Button Click
+            document.getElementById('backToAllTestimonialsBtn').addEventListener('click', function() {
+                document.querySelector('.admin-card:first-child').style.display = 'block';
+                document.getElementById('pendingTestimonials').style.display = 'none';
+            });
+            
+            // Star Rating Functionality
+            const ratingInputs = document.querySelectorAll('.star-rating input');
+            ratingInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    const ratingValue = this.value;
+                    const ratingDisplay = this.closest('.rating-input').querySelector('.rating-value');
+                    ratingDisplay.textContent = ratingValue + '.0';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

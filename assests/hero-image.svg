@@ -1,0 +1,33 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Hospital Building -->
+  <rect x="100" y="150" width="200" height="200" fill="#ffffff" stroke="#1a73e8" stroke-width="3"/>
+  <rect x="140" y="200" width="40" height="60" fill="#1a73e8"/>
+  <rect x="220" y="200" width="40" height="60" fill="#1a73e8"/>
+  <rect x="140" y="280" width="40" height="70" fill="#1a73e8"/>
+  <rect x="220" y="280" width="40" height="70" fill="#1a73e8"/>
+  <rect x="180" y="330" width="40" height="20" fill="#1a73e8"/>
+  <path d="M100 150 L200 80 L300 150" fill="#1a73e8" stroke="#1a73e8" stroke-width="3"/>
+  <rect x="180" y="120" width="40" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Medical Cross -->
+  <rect x="400" y="150" width="100" height="100" rx="10" ry="10" fill="#1a73e8"/>
+  <rect x="430" y="170" width="40" height="60" fill="#ffffff"/>
+  <rect x="420" y="180" width="60" height="40" fill="#ffffff"/>
+  
+  <!-- Doctor -->
+  <circle cx="450" cy="300" r="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="435" y="330" width="30" height="60" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="420" y="340" width="15" height="40" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="465" y="340" width="15" height="40" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Stethoscope -->
+  <path d="M440 360 C 460 380, 480 370, 500 350" fill="none" stroke="#1a73e8" stroke-width="2"/>
+  <circle cx="500" cy="350" r="5" fill="#1a73e8"/>
+  
+  <!-- Text -->
+  <text x="300" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a73e8">Med-Aids Healthcare</text>
+  <text x="300" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">Your Health, Our Priority</text>
+</svg>

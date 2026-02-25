@@ -1,0 +1,32 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Specialized Treatment Illustration -->
+  <!-- Medical Equipment -->
+  <rect x="50" y="70" width="80" height="60" rx="5" ry="5" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="60" y="80" width="60" height="10" fill="#1a73e8"/>
+  <rect x="60" y="100" width="60" height="10" fill="#1a73e8"/>
+  <rect x="60" y="120" width="60" height="10" fill="#1a73e8"/>
+  
+  <!-- Doctor with Specialized Equipment -->
+  <circle cx="180" cy="80" r="25" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="170" y="105" width="20" height="50" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="155" y="115" width="15" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="190" y="115" width="15" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Specialized Tool -->
+  <path d="M190 130 C 210 120, 220 110, 240 100" fill="none" stroke="#34a853" stroke-width="2"/>
+  <circle cx="240" cy="100" r="10" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <path d="M235 95 L245 105 M235 105 L245 95" stroke="#34a853" stroke-width="2"/>
+  
+  <!-- DNA Helix Symbol -->
+  <path d="M130 30 C 140 40, 120 50, 130 60 C 140 70, 120 80, 130 90" fill="none" stroke="#1a73e8" stroke-width="2"/>
+  <path d="M130 30 C 120 40, 140 50, 130 60 C 120 70, 140 80, 130 90" fill="none" stroke="#34a853" stroke-width="2"/>
+  <circle cx="130" cy="30" r="3" fill="#1a73e8"/>
+  <circle cx="130" cy="60" r="3" fill="#1a73e8"/>
+  <circle cx="130" cy="90" r="3" fill="#1a73e8"/>
+  
+  <!-- Text -->
+  <text x="150" y="180" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a73e8">Specialized Treatment</text>
+</svg>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Med-Aids</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <link rel="stylesheet" href="../styles/features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <div class="dark-mode-toggle">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </div>
+            <div class="logo">
+                <h1>Med-<span>Aids</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help with your healthcare needs</p>
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">></span>
+                <span class="current">Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Multiple ways to connect with our healthcare team</p>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>123 Healthcare Avenue<br>Medical District<br>New York, NY 10001</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline">Get Directions</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <p><strong>Main Line:</strong> +1 (555) 123-4567<br>
+                    <strong>Appointments:</strong> +1 (555) 234-5678<br>
+                    <strong>Emergency:</strong> +1 (555) 911-1234</p>
+                    <a href="tel:+15551234567" class="btn btn-outline">Call Now</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p><strong>General Inquiries:</strong><br>info@med-aids.com<br>
+                    <strong>Appointments:</strong><br>appointments@med-aids.com<br>
+                    <strong>Support:</strong><br>support@med-aids.com</p>
+                    <a href="mailto:info@med-aids.com" class="btn btn-outline">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Working Hours</h3>
+                    <p><strong>Monday-Friday:</strong> 8:00 AM - 8:00 PM<br>
+                    <strong>Saturday:</strong> 9:00 AM - 5:00 PM<br>
+                    <strong>Sunday:</strong> 10:00 AM - 2:00 PM<br>
+                    <strong>Emergency Care:</strong> 24/7</p>
+                    <a href="services.html" class="btn btn-outline">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-map">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Conveniently located in the heart of the city</p>
+            </div>
+            
+            <div class="map-container">
+                <!-- This is a placeholder for a map. In a real implementation, you would use Google Maps or another mapping service. -->
+                <div class="map-placeholder">
+                    <svg width="100%" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="400" fill="#e9f5f9" />
+                        <path d="M0 100 L800 100 L800 300 L0 300 Z" fill="#c4e8f2" />
+                        <path d="M300 0 L500 0 L500 400 L300 400 Z" fill="#c4e8f2" />
+                        <rect x="350" y="150" width="100" height="100" fill="#4a89dc" />
+                        <circle cx="400" cy="200" r="20" fill="#e74c3c" />
+                        <text x="400" y="205" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Med-Aids</text>
+                        <text x="400" y="380" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">123 Healthcare Avenue, Medical District, New York, NY 10001</text>
+                    </svg>
+                </div>
+                <p class="map-note">For interactive directions, please use Google Maps or your preferred navigation app.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="section-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <form class="message-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="appointment">Schedule an Appointment</option>
+                                <option value="inquiry">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="consent" class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            I consent to having my data processed for the purpose of contacting me.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-form-image">
+                <img src="../assests/about-image.svg" alt="Contact Med-Aids">
+                <div class="contact-form-cta">
+                    <h3>Need Immediate Assistance?</h3>
+                    <p>Our customer service team is available to help you with any questions or concerns.</p>
+                    <a href="tel:+15551234567" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I schedule an appointment?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can schedule an appointment by calling our appointment line at +1 (555) 234-5678, using our online appointment form, or sending an email to appointments@med-aids.com. Please provide your preferred date and time, and we'll do our best to accommodate your schedule.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What insurance plans do you accept?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept most major insurance plans, including Medicare and Medicaid. Please contact our billing department at +1 (555) 345-6789 or billing@med-aids.com to verify if we accept your specific insurance plan.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I access my medical records?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can access your medical records through our secure patient portal. If you haven't registered for the portal yet, please contact our support team at support@med-aids.com or call +1 (555) 456-7890 for assistance. You can also request physical copies of your records by filling out a medical records release form.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I bring to my first appointment?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For your first appointment, please bring your insurance card, a valid photo ID, a list of current medications, your medical history, and any relevant medical records or test results. It's also helpful to arrive 15 minutes early to complete any necessary paperwork.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer telemedicine services?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer telemedicine services for a variety of healthcare needs. Virtual consultations can be scheduled through our appointment line or online. Our telemedicine platform is secure, user-friendly, and compliant with all healthcare privacy regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Quality Healthcare?</h2>
+            <p>Our team of healthcare professionals is committed to providing you with the best care possible.</p>
+            <div class="cta-buttons">
+                <a href="tel:+15552345678" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call for Appointment</a>
+                <a href="services.html" class="btn btn-secondary"><i class="fas fa-info-circle"></i> Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Med-<span>Aids</span></h2>
+                    <p>Your trusted healthcare partner</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#primary-care">Primary Care</a></li>
+                        <li><a href="services.html#specialized-treatment">Specialized Treatment</a></li>
+                        <li><a href="services.html#emergency-care">Emergency Care</a></li>
+                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
+                        <li><a href="services.html#health-checkups">Health Checkups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for health tips and updates</p>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Med-Aids. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/script.js"></script>
+    <script src="../src/features.js"></script>
+</body>
+</html>

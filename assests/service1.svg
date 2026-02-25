@@ -1,0 +1,28 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Doctor with Patient -->
+  <!-- Doctor -->
+  <circle cx="100" cy="80" r="25" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="90" y="105" width="20" height="50" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="75" y="115" width="15" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="110" y="115" width="15" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Stethoscope -->
+  <path d="M100 130 C 120 150, 140 140, 160 120" fill="none" stroke="#1a73e8" stroke-width="2"/>
+  <circle cx="160" cy="120" r="5" fill="#1a73e8"/>
+  
+  <!-- Patient -->
+  <circle cx="200" cy="80" r="25" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="190" y="105" width="20" height="50" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="175" y="115" width="15" height="30" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="210" y="115" width="15" height="30" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  
+  <!-- Medical Icons -->
+  <rect x="130" y="40" width="40" height="40" rx="5" ry="5" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="140" y="50" width="20" height="20" fill="#1a73e8"/>
+  
+  <!-- Text -->
+  <text x="150" y="180" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a73e8">Primary Care</text>
+</svg>

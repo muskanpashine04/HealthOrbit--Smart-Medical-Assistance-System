@@ -1,0 +1,39 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Telemedicine Illustration -->
+  <!-- Computer/Laptop -->
+  <rect x="50" y="80" width="80" height="60" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="50" y="140" width="80" height="10" fill="#1a73e8"/>
+  <rect x="85" y="140" width="10" height="20" fill="#1a73e8"/>
+  <rect x="75" y="160" width="30" height="5" fill="#1a73e8"/>
+  
+  <!-- Doctor on Screen -->
+  <rect x="60" y="90" width="60" height="40" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <circle cx="90" cy="100" r="10" fill="#ffffff" stroke="#1a73e8" stroke-width="1"/>
+  <rect x="85" y="110" width="10" height="15" fill="#ffffff" stroke="#1a73e8" stroke-width="1"/>
+  <path d="M85 115 L80 120 M95 115 L100 120" stroke="#1a73e8" stroke-width="1"/>
+  
+  <!-- Patient -->
+  <circle cx="200" cy="100" r="20" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="190" y="120" width="20" height="40" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="175" y="130" width="15" height="25" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  <rect x="210" y="130" width="15" height="25" fill="#ffffff" stroke="#34a853" stroke-width="2"/>
+  
+  <!-- Connection Lines -->
+  <path d="M130 110 C 150 90, 170 130, 190 110" stroke="#1a73e8" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+  
+  <!-- Mobile Device -->
+  <rect x="220" y="130" width="30" height="50" rx="5" ry="5" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="225" y="135" width="20" height="30" fill="#e6f2ff" stroke="#1a73e8" stroke-width="1"/>
+  <circle cx="235" cy="175" r="3" fill="#1a73e8"/>
+  
+  <!-- Wifi Symbol -->
+  <path d="M150 40 C 170 30, 180 30, 200 40" stroke="#1a73e8" stroke-width="2" fill="none"/>
+  <path d="M160 50 C 170 45, 180 45, 190 50" stroke="#1a73e8" stroke-width="2" fill="none"/>
+  <circle cx="175" cy="60" r="3" fill="#1a73e8"/>
+  
+  <!-- Text -->
+  <text x="150" y="180" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a73e8">Telemedicine</text>
+</svg>

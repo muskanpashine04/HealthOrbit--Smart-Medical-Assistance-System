@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management - Med-Aids Admin</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <link rel="stylesheet" href="../styles/features.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-wrapper">
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <h2>Med-<span>Aids</span></h2>
+                <p>Admin Panel</p>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="admin-content.html">
+                            <i class="fas fa-edit"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-services.html">
+                            <i class="fas fa-stethoscope"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-testimonials.html">
+                            <i class="fas fa-comment-medical"></i>
+                            <span>Testimonials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-users.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-appointments.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-settings.html">
+                            <i class="fas fa-cogs"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+                <a href="../index.html" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Site</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Admin Content Area -->
+        <main class="admin-content">
+            <!-- Admin Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Content Management</h1>
+                </div>
+                
+                <div class="admin-header-right">
+                    <div class="dark-mode-toggle">
+                        <i class="fas fa-moon" id="dark-mode-icon"></i>
+                    </div>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="admin-notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-user">
+                        <img src="https://via.placeholder.com/40/007bff/ffffff?text=AU" alt="Admin User" class="admin-avatar">
+                        <div class="admin-user-info">
+                            <p class="admin-name">Admin User</p>
+                            <p class="admin-role">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Content Management -->
+            <div class="admin-content-area">
+                <!-- Page Selection -->
+                <div class="admin-card page-selection">
+                    <div class="admin-card-header">
+                        <h2>Select Page to Edit</h2>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <div class="page-grid">
+                            <div class="page-item active">
+                                <div class="page-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h3>Home Page</h3>
+                                <p>Main landing page</p>
+                            </div>
+                            
+                            <div class="page-item">
+                                <div class="page-icon">
+                                    <i class="fas fa-stethoscope"></i>
+                                </div>
+                                <h3>Services</h3>
+                                <p>Healthcare services</p>
+                            </div>
+                            
+                            <div class="page-item">
+                                <div class="page-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3>About Us</h3>
+                                <p>Company information</p>
+                            </div>
+                            
+                            <div class="page-item">
+                                <div class="page-icon">
+                                    <i class="fas fa-comment-medical"></i>
+                                </div>
+                                <h3>Testimonials</h3>
+                                <p>Patient reviews</p>
+                            </div>
+                            
+                            <div class="page-item">
+                                <div class="page-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h3>Contact</h3>
+                                <p>Contact information</p>
+                            </div>
+                            
+                            <div class="page-item">
+                                <div class="page-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <h3>Add New Page</h3>
+                                <p>Create custom page</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section Editor (Home Page) -->
+                <div class="admin-card section-editor">
+                    <div class="admin-card-header">
+                        <h2>Edit Home Page Sections</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> Preview</button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <!-- Section Tabs -->
+                        <div class="section-tabs">
+                            <button class="section-tab active" data-section="hero">Hero Section</button>
+                            <button class="section-tab" data-section="features">Features</button>
+                            <button class="section-tab" data-section="services">Services</button>
+                            <button class="section-tab" data-section="about">About</button>
+                            <button class="section-tab" data-section="testimonials">Testimonials</button>
+                            <button class="section-tab" data-section="contact">Contact</button>
+                            <button class="section-tab" data-section="footer">Footer</button>
+                        </div>
+                        
+                        <!-- Hero Section Editor -->
+                        <div class="section-content active" id="hero-section">
+                            <div class="section-form">
+                                <div class="form-group">
+                                    <label for="hero-heading">Main Heading</label>
+                                    <input type="text" id="hero-heading" value="Your Health is Our Priority" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hero-subheading">Subheading</label>
+                                    <input type="text" id="hero-subheading" value="Providing quality healthcare services for you and your family" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hero-description">Description</label>
+                                    <textarea id="hero-description" class="form-control" rows="4">Med-Aids is committed to providing exceptional healthcare services with a focus on patient comfort and well-being. Our team of experienced medical professionals is dedicated to delivering personalized care tailored to your needs.</textarea>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="primary-btn-text">Primary Button Text</label>
+                                        <input type="text" id="primary-btn-text" value="Book Appointment" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="primary-btn-link">Primary Button Link</label>
+                                        <input type="text" id="primary-btn-link" value="pages/contact.html" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="secondary-btn-text">Secondary Button Text</label>
+                                        <input type="text" id="secondary-btn-text" value="Learn More" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="secondary-btn-link">Secondary Button Link</label>
+                                        <input type="text" id="secondary-btn-link" value="pages/services.html" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hero-image">Hero Image</label>
+                                    <div class="image-upload-container">
+                                        <div class="image-preview">
+                                            <img src="../assests/hero-image.svg" alt="Hero Image">
+                                        </div>
+                                        <div class="image-upload-controls">
+                                            <button class="btn btn-outline"><i class="fas fa-upload"></i> Upload New Image</button>
+                                            <button class="btn btn-outline btn-danger"><i class="fas fa-trash-alt"></i> Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SEO Settings -->
+                <div class="admin-card seo-settings">
+                    <div class="admin-card-header">
+                        <h2>SEO Settings</h2>
+                        <button class="btn btn-primary"><i class="fas fa-save"></i> Save SEO Settings</button>
+                    </div>
+                    
+                    <div class="admin-card-content">
+                        <div class="form-group">
+                            <label for="page-title">Page Title</label>
+                            <input type="text" id="page-title" value="Med-Aids - Your Trusted Healthcare Partner" class="form-control">
+                            <p class="form-hint">Recommended length: 50-60 characters</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="meta-description">Meta Description</label>
+                            <textarea id="meta-description" class="form-control" rows="3">Med-Aids provides comprehensive healthcare services including primary care, specialized treatments, emergency care, telemedicine, and health checkups for patients of all ages.</textarea>
+                            <p class="form-hint">Recommended length: 150-160 characters</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="meta-keywords">Meta Keywords</label>
+                            <input type="text" id="meta-keywords" value="healthcare, medical services, doctors, primary care, specialized treatment, emergency care" class="form-control">
+                            <p class="form-hint">Separate keywords with commas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../src/script.js"></script>
+    <script src="../src/admin.js"></script>
+</body>
+</html>

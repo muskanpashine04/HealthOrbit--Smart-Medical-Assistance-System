@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Med-Aids</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <link rel="stylesheet" href="../styles/features.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <div class="dark-mode-toggle">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </div>
+            <div class="logo">
+                <h1>Med-<span>Aids</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Login to Your Account</h1>
+            <p>Access your personalized healthcare dashboard</p>
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">></span>
+                <span class="current">Login</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form-container">
+                    <div class="auth-tabs">
+                        <a href="login.html" class="auth-tab active">Login</a>
+                        <a href="register.html" class="auth-tab">Register</a>
+                    </div>
+                    
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" required>
+                                <i class="fas fa-eye toggle-password"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        
+                        <div class="auth-divider">
+                            <span>or login with</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="social-btn google">
+                                <i class="fab fa-google"></i>
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="register.html">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="auth-info">
+                    <div class="auth-info-content">
+                        <h2>Welcome Back!</h2>
+                        <p>Log in to access your personalized healthcare dashboard, manage appointments, view medical records, and more.</p>
+                        
+                        <div class="auth-features">
+                            <div class="auth-feature">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <h3>Appointment Management</h3>
+                                    <p>Schedule, reschedule, or cancel appointments with ease.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-feature">
+                                <i class="fas fa-file-medical"></i>
+                                <div>
+                                    <h3>Medical Records</h3>
+                                    <p>Access your medical history, test results, and prescriptions.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-feature">
+                                <i class="fas fa-pills"></i>
+                                <div>
+                                    <h3>Medication Reminders</h3>
+                                    <p>Set up reminders for your medications and treatments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Med-<span>Aids</span></h2>
+                    <p>Your trusted healthcare partner</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#primary-care">Primary Care</a></li>
+                        <li><a href="services.html#specialized-treatment">Specialized Treatment</a></li>
+                        <li><a href="services.html#emergency-care">Emergency Care</a></li>
+                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
+                        <li><a href="services.html#health-checkups">Health Checkups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for health tips and updates</p>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Med-Aids. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/script.js"></script>
+    <script src="../src/features.js"></script>
+    <script src="../src/auth.js"></script>
+</body>
+</html>

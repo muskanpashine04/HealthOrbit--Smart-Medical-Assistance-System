@@ -1,0 +1,37 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Emergency Care Illustration -->
+  <!-- Ambulance -->
+  <rect x="50" y="100" width="120" height="50" rx="5" ry="5" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="170" y="120" width="30" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="50" y="120" width="120" height="30" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <circle cx="80" cy="150" r="10" fill="#666" stroke="#333" stroke-width="1"/>
+  <circle cx="150" cy="150" r="10" fill="#666" stroke="#333" stroke-width="1"/>
+  
+  <!-- Emergency Symbol -->
+  <rect x="100" y="110" width="40" height="20" fill="#ea4335"/>
+  <path d="M110 115 L130 115 M120 110 L120 130" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Emergency Light -->
+  <rect x="170" y="90" width="20" height="10" fill="#ea4335"/>
+  <path d="M180 90 L180 70 L190 60 L200 70 L200 90" fill="#ea4335"/>
+  
+  <!-- Hospital Building -->
+  <rect x="220" y="80" width="60" height="70" fill="#ffffff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="235" y="100" width="30" height="50" fill="#1a73e8"/>
+  <path d="M220 80 L250 60 L280 80" fill="#1a73e8" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Emergency Symbol on Hospital -->
+  <rect x="240" y="40" width="20" height="20" rx="10" ry="10" fill="#ea4335"/>
+  <path d="M245 50 L255 50 M250 45 L250 55" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Heartbeat Line -->
+  <path d="M30 50 L50 50 L60 30 L70 70 L80 50 L100 50" stroke="#ea4335" stroke-width="2" fill="none"/>
+  <path d="M100 50 L120 50 L130 30 L140 70 L150 50 L170 50" stroke="#ea4335" stroke-width="2" fill="none"/>
+  <path d="M170 50 L190 50 L200 30 L210 70 L220 50 L240 50" stroke="#ea4335" stroke-width="2" fill="none"/>
+  
+  <!-- Text -->
+  <text x="150" y="180" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a73e8">Emergency Care</text>
+</svg>
