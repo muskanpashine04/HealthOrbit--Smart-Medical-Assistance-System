@@ -1,25 +1,18 @@
 # HealthOrbit--Smart-Medical-Assistance-System
 
 Welcome to HealthOrbit,  a web based healthcare assistant that helps users manage medicines, store medical records, and get emergency support. healthcare website designed to provide information about services, manage appointments, and offer an administrative panel for efficient content and user management.
-🔹 2. Problem Statement
 
+🔹 Problem Statement
 Many people struggle to:
-
 Track medicines on time
-
 Store medical records safely
-
 Get quick first-aid guidance
-
 Find nearby hospitals in emergencies
 
-MedAids aims to solve these problems using a simple digital platform.
+HealthOrbit aims to solve these problems using a simple digital platform.
 
-🔹 3. Solution Overview
 
-MedAids is a web/mobile-based healthcare assistant that helps users manage medicines, store medical records, and get emergency support.
-
-🔹 4. Core Features (Prototype Modules)
+🔹  Core Features (Prototype Modules)
 1️⃣ User Registration & Login
 
 Secure login system
@@ -82,7 +75,7 @@ Upload Records
 
 Emergency Help
 
-🔹 6. Technology Stack (Example for BTech CSE)
+🔹 6. Technology Stack
 
 Frontend: HTML, CSS, JavaScript / React
 
@@ -213,4 +206,5 @@ To further enhance the code quality and maintainability of this project, conside
     *   **Version Control:** Ensure consistent use of Git for version control.
     *   **CI/CD Pipeline:** Set up continuous integration and continuous deployment to automate testing and deployment processes.
     *   **Containerization:** Consider Docker for consistent development and deployment environments.
+
 
